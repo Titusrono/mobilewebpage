@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solange’s Foodie Adventures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center; /* Center the image horizontally */
+            align-items: center; /* Center the image vertically */
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Hide any overflow */
+        }
+        
+        .hero img {
+            width: 75%; /* Occupy 3/4 of the screen */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure responsiveness on smaller screens */
+        }
+        
+
+        .featured {
+            padding: 20px;
+        }
+
+        .recipe-card {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .newsletter {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Solange’s Foodie Adventures</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images\RECIPE.jpeg" alt="Featured Recipes">
+        </section>
+
+        <section class="featured">
+            <h2>Featured Recipes</h2>
+            <div class="recipe-card">
+                <img src="images\images.jpeg" alt="Recipe 1">
+                <h3>Recipe vegetable</h3>
+                <p>Enjoy our green vegetable with fresh fruits.</p>
+            </div>
+            <div class="recipe-card">
+                <img src="images\download.jpeg" alt="Recipe 2">
+                <h3>Recipe Cooked Food</h3>
+                <p>We cook healtier food here.</p>
+            </div>
+            <div class="recipe-card">
+                <img src="images\SOLANGE1.jpeg" alt="Recipe 3">
+                <h3>Recipe Fresh fruits</h3>
+                <p>This are our natural fruits free from the herbicedes. They are natural.</p>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Solange’s Foodie Adventures. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with the email: ${email}`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
